@@ -13,7 +13,3 @@ RUN yum repolist
 RUN yum -y update && \
     yum clean all && \
     yum install satellite
-
-EXPOSE 80
-
-CMD  ["httpd", "-D", "FOREGROUND"]
