@@ -22,3 +22,5 @@ RUN satellite-installer --scenario satellite \
     --foreman-admin-password admin-password \
     --foreman-proxy-dns-managed=false \
     --foreman-proxy-dhcp-managed=false
+
+CMD sleep 6000
