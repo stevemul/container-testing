@@ -13,5 +13,4 @@ RUN yum-config-manager --enable rhel-7-server-satellite-6.2-rpms
 RUN yum repolist
 
 RUN yum -y update && \
-    yum clean all && \
-    yum install satellite
+    yum -y install satellite
