@@ -4,6 +4,8 @@ MAINTAINER Steve M
 
 LABEL description="Attempt to install satellite"
 
+USER root
+
 RUN yum --disablerepo=* --enablerepo=rhel-7-server-rpms install yum-utils
     
 RUN yum-config-manager --enable rhel-server-rhscl-7-rpms rhel-7-server-satellite-6.2-rpms
@@ -22,5 +24,7 @@ RUN hostname -b `facter fqdn` && satellite-installer --scenario satellite \
     --foreman-admin-password admin-password \
     --foreman-proxy-dns-managed=false \
     --foreman-proxy-dhcp-managed=false
+
+USER 1001
 
 CMD sleep 6000
