@@ -15,7 +15,7 @@ RUN yum repolist
 RUN yum -y update && \
     yum -y install satellite
 
-RUN export FACTER_fqdn=`hostname -f` && satellite-installer --scenario satellite \
+RUN hostname -b `facter fqdn` && satellite-installer --scenario satellite \
     --foreman-initial-organization "initial_organization_name" \
     --foreman-initial-location "initial_location_name" \
     --foreman-admin-username admin-username \
