@@ -2,7 +2,7 @@ FROM registry.access.redhat.com/rhel7/rhel
 
 MAINTAINER Steve M
 
-LABEL description="Attempt to install satellite"
+LABEL description="Attempt to install satellite "
 
 USER root
 
